@@ -1,0 +1,8 @@
+<h1>Studenti</h1>
+
+<div *ngFor="let studente of listaStudenti">
+  <!-- imposto la rotta con il routerLink -->
+  <a routerLink="/studente/{{studente.nome}}"> {{ studente.nome }} </a>
+
+
+</div>

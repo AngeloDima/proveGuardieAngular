@@ -1,0 +1,12 @@
+<div *ngIf="dettail">
+  <h1>nome: {{dettail.nome}} </h1>
+  <h1>cognome: {{dettail.cognome}} </h1>
+  <h1>corso: {{dettail.corso}} </h1>
+
+  <h3 *ngIf="dettail.stato === false">Sei bocciato</h3>
+  <h3 *ngIf="dettail.stato === true">Sei Promosso</h3>
+
+
+</div>
+
+<button routerLink="../../">Torna indietro</button>
