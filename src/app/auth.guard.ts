@@ -7,19 +7,15 @@ export const authGuard: CanActivateFn = (route, state) => {
   const logServ = inject(LoginService)
   const router = inject(Router)
 
-  console.log('controllo la rotta');
-
-
-
 
   if (logServ.utenteValido) {
-
-    return true;
+    console.log('VERIFICATO');
+    return true
   } else {
+    console.log('LEONARDo');
+
     return router.navigate(['/'])
   }
-
-
 
 };
 

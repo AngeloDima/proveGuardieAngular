@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Dati } from './dati';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,9 @@ export class LoginService {
 
     if (utenteCheck) {
       this.utenteValido = true
+
       return true
+
     }
     else {
       this.utenteValido = false

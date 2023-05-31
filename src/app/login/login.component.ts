@@ -9,25 +9,21 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent {
 
-  datiLogin: Dati[] = []
+  datiLogin: Dati[] = [];
 
   constructor(private logServ: LoginService) {
     this.datiLogin = this.logServ.dati
   }
 
-  nomeLOG: string
-  nomeROLE: string
+  nomeLOG: string;
+  nomeROLE: string;
 
   verificoLogin(nomeLOG: string, nomeROLE: string) {
-    const isLogged = this.logServ.login(nomeLOG, nomeROLE)
+    const isLogged = this.logServ.login(nomeLOG, nomeROLE);
     if (isLogged) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
-
-
   }
 }
-
-

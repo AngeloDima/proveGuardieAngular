@@ -7,9 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: "", component: LoginComponent, canActivate: [authGuard] },                     //metto la guardia
+  { path: "", component: LoginComponent },                     //metto la guardia
   { path: "studente", component: StudenteComponent, canActivate: [authGuard] },
-  { path: "studente/:nome", component: StudenteDettailComponent, canActivate: [authGuard] }
+  { path: "studente/:nome", component: StudenteDettailComponent, canActivate: [authGuard] },
+
 
 ];
 
