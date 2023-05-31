@@ -19,11 +19,6 @@ export class LoginComponent {
   nomeROLE: string;
 
   verificoLogin(nomeLOG: string, nomeROLE: string) {
-    const isLogged = this.logServ.login(nomeLOG, nomeROLE);
-    if (isLogged) {
-      return true;
-    } else {
-      return false;
-    }
+    this.logServ.login(nomeLOG, nomeROLE);
   }
 }

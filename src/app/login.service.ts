@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
-  //creo il container per i dati
+
   dati: Dati[] = [
     {
       nome: "Angelo",
@@ -16,26 +16,31 @@ export class LoginService {
   //flag
   utenteValido: boolean
 
-  //passo i parametri NOME e ROLE
-  login(nome: string, role: string) {
 
+  login(nomeLOG: string, nomeROLE: string) {
 
-    //cerco uno studente che abbia NOME e ROLE uguale
-    let utenteCheck = this.dati.find((utenteVER) => {
-      return (utenteVER.nome == nome && utenteVER.role == role)
+    let utenteCheck = this.dati.find((dati) => {
+      return (dati.nome == nomeLOG && dati.role == nomeROLE)
     })
-
     if (utenteCheck) {
       this.utenteValido = true
-
-      return true
-
-    }
-    else {
+    } else {
       this.utenteValido = false
-      return false
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   constructor() { }
 
